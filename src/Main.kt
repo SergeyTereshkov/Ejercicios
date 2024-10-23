@@ -93,4 +93,23 @@ fun sumTwoNumbers(num1: Int, num2: Int) : Int {
  */
 fun classes() {
 
+    // Creamos un objeto Programmer
+    val sergey = Programmer("Sergey", 20, arrayOf(Programmer.language.JAVA, Programmer.language.KOTLIN), null)
+
+    // Mostramos un dato del objeto
+    println(sergey.name)
+
+    // Cambiamos el dato edad
+    sergey.age = 21
+
+    // Mostramos la edad
+    println(sergey.age)
+
+    // Creamos un objeto Programmer
+    val juan = Programmer("Juan", 19, arrayOf(Programmer.language.C, Programmer.language.JAVASCRIPT), arrayOf(sergey))
+
+    // Usamos una funcion de la clase
+    juan.code()
+
+    println("${juan.friends?.first()?.name} es amigo de ${juan.name}")
 }
